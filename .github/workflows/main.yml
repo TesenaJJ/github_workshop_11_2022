@@ -6,4 +6,13 @@ jobs:
     steps:
         - name: ahoj_svete
           run: echo Hello world
+  # druhý job 
+  need_job:
+    needs: ahoj_svete # závislý na ahoj_svete, tj. spusti se az po nem      
+    runs-on: ubuntu-latest
+    steps:
+      - name: need_2echa
+        run: 
+          echo Ahoj,
+          echo ja se spustim az dobehne job ahoj svete
         
