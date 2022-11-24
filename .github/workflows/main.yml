@@ -29,7 +29,10 @@ jobs:
     runs-on: ubuntu-latest
     env: 
       PROMENNA: oblibeny_hrdina
+      VAR: $SECRETE_DONT_READ
     steps:
       - name: ukazka_promenne
-        run: echo $PROMENNA
+        run: 
+          echo $PROMENNA
+          echo $VAR
         
