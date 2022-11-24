@@ -1,11 +1,20 @@
 name: learn_github_workshop
 on: [push, workflow_dispatch]
 jobs:
+  if_job: #podmínka
+    if: ${{ github.triggering_actor == 'TesenaJJ' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo_name_podminka
+        run: acho triggnula me "${{ github.triggering_actor}}"
+    
   ahoj_svete:
     runs-on: ubuntu-latest
     steps:
         - name: ahoj_svete
           run: echo Hello world
+          
+          
   # druhý job 
   need_job:
     needs: ahoj_svete # závislý na ahoj_svete, tj. spusti se az po nem      
