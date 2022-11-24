@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: echo_name_podminka
-        run: acho triggnula me "${{ github.triggering_actor}}"
+        run: echo triggnula me "${{ github.triggering_actor}}"
     
   ahoj_svete:
     runs-on: ubuntu-latest
